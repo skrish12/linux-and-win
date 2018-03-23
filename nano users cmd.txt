@@ -1,0 +1,151 @@
+shell used for atomate sys tasks.
+nano is text editors alternative to vi.
+nano users 
+write names and come back to terminal and type
+
+write script
+vi xyx.sh
+
+#!/bin/bash
+while read name
+do 
+echo $name
+
+done<users
+
+
+Linux directory structure
+
+/ indicates root dir.
+
+1 home --- root
+2 usr/bin------------ by ordinary user
+ sbin ----contains exec file --by super user
+3 etc-----configuration files
+4 var/log----------logfiles
+
+(your hd reffered by /dev/sda)
+in linux everything is treated as file
+two files
+1 ordinary
+data  ascii
+binary you need application for it and excutables
+2 device
+
+5 dev -----all special devices
+6 proc-----used for os
+ sys ----both are virtual file system-----used for getting info about hardware.
+	means they are not in hd---they are in ram.
+
+7 tmp----temprary (not permanant) 
+8 boot--------files used for booting up
+9 opt
+  srv-------both used for installing third party applications.
+
+
+
+# prompt is for root user
+$ prompt is for ordinary user
+
+cat /proc/meminfo used to get know about memory status.
+
+# ls -l /dev|grep sda ----------------it displays the contents with (sda).
+hard disk info (how many partitions are there)
+
+ls /sys/block
+hardware info                    (grep cmd used for pattern match)
+
+cat cmd is for get the content of file
+ls used to list the directory contents.
+
+touch is used for create a file
+touch a.txt
+
+rm is used for delete files.
+
+echo "data" > filename (a.txt)
+cat a.txt
+
+cp is used to copy the data from one file to another.
+cp source dest
+
+mv (rename or moving) cmd is used for rename the file.
+mkdir to craete directory.
+
+-l(along with ls) (called as long listing) is used for list the attributes of file or directory.
+
+- indicates file
+d indicates directory (major numbers only comes for directory).
+l indicates link
+
+in device dir(# la -l /dev)
+c  character device(stream of bits)
+b  block device(files stored in form of block)
+
+mkdir -p {virat/calcutta/{innings1,innings2},dhoni/bangalore/{odi1,odi2}}
+
+rmdir is used delete only empty folders/directory
+if folder contains something then use rm -r foldername
+
+file is command that used to find the type of file
+
+journalling is techanique that used to seperate the metadata from file
+it contains every file data.
+maintain data
+if journalling is there then no need of fsck
+
+fsck used for ext2.....other journalling.
+
+while file system in problem use fsck commond to solve.
+inode will update the metadata after creating files.
+data stored in blocks(linked lists(data structure)).
+to check inode number then use ls -il commmand options.
+
+fdisk -l used to know info about hd.
+
+
+to create file system in new hd fdisk /dev/sdb     then press m to know options about different operations.
+partprobe command which allow kernel to reread the partition table  
+
+mkfs.ext4 /dev/sdb1 to create file system
+mkdir /data
+df -h        used to 
+then mount it on new hd
+mount /dev/sdb1 /data
+after this you are able create dir.
+cd /data
+dd if=/dev/zero of=file1 bs=1M count=100
+dd command used to create ram file system.
+when you are mounting your directory should be empty.
+
+
+
+to unmount
+unmount /data
+
+partx -a /dev/sdb ---- alternate to partprobe
+swapon -s used to convert the file system to swap file system.
+
+
+
+ps a
+to view process details
+The ps (i.e., process status) command is used to provide information about the currently running processes, including their process identification numbers (PIDs).
+ 
+
+ps ax to view all the processes.
+
+3 types of variables
+1 global
+2 local
+3 environment(access any domain) (we can create our own environment var using env)(/etc/profile then available for everyone)($HOME/.bash_profile)----perticular user.
+ 
+
+to create global var =-------$ export os='debian'
+global var have access only in child domain
+
+shell is local variable
+
+
+
+if you want know the name of the user then- ---------- --echo $LOGNAME

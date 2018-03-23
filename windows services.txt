@@ -1,0 +1,11 @@
+Active Directory Service – Active Directory is a service Microsoft developed for Windows networks. It is included by default in most Microsoft Windows Server systems. Active Directory oversees centralized domain management and identity-related functions.
+
+Prefetch and Superfetch Service – Speeds up operating system and application startup by caching to RAM frequently used files, libraries and application components. It does this by monitoring application usage and behavior.
+Background Intelligent Transfer Service – This service facilitates throttled, prioritized and asynchronous file transfer between machines via idle bandwidth. It plays a key role in the delivery of software updates from servers to clients as well as in the transfer of files on Microsoft’s instant messaging applications.
+
+DNS Client Service – This service resolves domain names to IP addresses and locally caches this data.
+Computer Browser Service – It allows users to easily locate shared resources on neighboring computers. All information is aggregated on one of the computers (referred to as the Master Browser) and other computers contact this machine for information on shared resources.
+
+Internet Connection Sharing (ICS) Service – ICS enables the use of one device connected to the internet as an access point for other devices. Access could be through Ethernet broadband, cellular service or other gateway.
+
+Routing and Remote Access Service – This service makes it possible to create applications that manage the remote access and routing capabilities of the Windows operating system. It allows the machine to act as a network router.

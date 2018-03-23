@@ -1,0 +1,50 @@
+Network Fundamentals
+how to find the problem of computer
+
+if restarting in same place ---it is problem of software
+if restarting in different place ---it is problem of hardware
+
+system hanging----------processor heat
+date and time problem--------cmos problem
+SMPS working-------short with two wires----green and black
+
+Adavantages of Network
+
+Time saving
+Reduce the cost of Org(s)
+resouce sharing
+online transctions
+
+Network model
+       peer to peer model
+		there is no master and no slave
+      server client model
+		one server and remaining all are clients
+			Adcantages
+				security
+				monitoring
+				Centralised architecture
+topologies
+types of network
+modes of transmission
+IP address
+Transmission Media
+Trouble shooting
+network trouble shooting
+proxy server
+Remote desktop
+coreless
+OSI Model
+TCP IP
+Protocols
+
+email configure with MS Outlook
+
+reduce the cost of org.(to launch a website i need to contact IIS (monthly / yearly we have to pay for that))
+ but ms outlook uses local hard disk to store info about mail.(we can get info from Website to hd using mail or exchange server)
+
+Security
+we can not use our personal mails
+monitoring (mail server)
+
+back up and restore
